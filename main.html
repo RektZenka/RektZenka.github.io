@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Serious Sprinters</title>
+    <style>
+        .button-container {
+            position: relative;
+            width: 500px;
+            height: 50px;
+        }
+
+        .myButton {
+            position: absolute;
+            left: 200px;
+            top: 350px;
+            background-color: rgb(255, 0, 106); /* Set the background color to pink */
+            font-size: 20px; /* Increase font size */
+            padding: 10px 20px; /* Add more padding for a larger button */
+            border: none; /* Remove border */
+            border-radius: 0px; /* Optional: add rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .myButton:hover {
+            background-color: purple; /* Change background color to purple when hovered */
+        }
+        /* Add this to set the text color to white for the entire body */
+        body {
+            background-image: url('images/web-bg.png');
+            color: white; /* Set text color to white */
+            font-family: Arial;
+        }
+
+        /* The sidebar menu */
+        .sidebar {
+            height: 100%; /* Full-height */
+            width: 50px; /* Initial width */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Black */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* Transition effect to slide in the sidebar */
+        }
+
+            /* The sidebar links */
+            .sidebar a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181; /* Sidebar links color */
+                display: none; /* Hide the text initially */
+                transition: 0.3s;
+            }
+            .sidebar a:hover {
+                color: rgb(255, 0, 106);
+            }
+
+            /* Show the text when the sidebar is fully expanded */
+            .sidebar.expanded a {
+                display: block;
+            }
+
+        /* The button used to open the sidebar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: rgb(255, 0, 149);
+            padding: 10px 15px;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+            .openbtn:hover {
+                background-color: #720e5c93;
+            }
+
+        /* Style page content */
+        #main {
+            transition: margin-left 0.5s; /* Transition effect */
+            padding: 20px;
+            margin-left: 50px; /* Adjusted margin */
+        }
+
+        /* On smaller screens, change the style of the sidenav */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='https://github.com/RektZenka';" class="download-button">Download<img src="images/download_icon.png" alt="" style="vertical-align: middle; margin-right: 5px; width: 72px; height: 72px;"></button>
+    <style>
+        .download-button {
+            background-color: rgb(255, 0, 106);
+            font-size: 50px;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            color: white;
+            position: relative;
+            left: 100px;
+            top: 500px;
+            width: 1000px;
+            height: 100px;
+        }
+        .download-button:hover {
+            background-color: purple;
+        }
+    </style>
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <button class="openbtn" onclick="toggleNav()">☰</button>
+        <a href="#">Download</a>
+        <a href="https://discord.gg/2c7tuq5vF9">Discord</a>
+        <a href="https://www.youtube.com/channel/UCbAk-6O4IpT1mxOIZTnW3sw">YouTube</a>
+        <a href="about-page.html">About</a>
+    </div>
+
+    <div id="main">
+        <h1>Serious Sprinters</h1>
+        <h2>funny running game</h2>
+        <p>There's nothing really to do here because I don't have much ready and I don't know how to make a website</p>
+    </div>
+
+    <script>
+        /* Toggle between showing and hiding the sidebar, and add overlay effect */
+        function toggleNav() {
+            var sidebar = document.getElementById("mySidebar");
+            var main = document.getElementById("main");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "50px";
+                sidebar.classList.remove('expanded');
+                main.style.marginLeft = "50px";
+            } else {
+                sidebar.style.width = "250px";
+                sidebar.classList.add('expanded');
+            }
+        }
+    </script>
+
+</body>
+</html>
