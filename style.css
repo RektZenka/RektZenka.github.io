@@ -2,12 +2,18 @@
 header {
     background-color: #333; /* Dark grey background */
     padding: 10px 20px;
+    width: 100%; /* Make the header full width */
+    position: fixed; /* Make the header fixed to the top */
+    top: 0; /* Position the header at the top */
+    left: 0; /* Position the header at the left */
+    z-index: 1; /* Make the header appear on top of other content */
   }
   
   /* Style the navigation bar */
   nav {
     display: flex;
     justify-content: space-between; /* Space links evenly */
+    width: 100%; /* Make the navigation bar full width */
   }
   
   /* Style the unordered list */
@@ -21,6 +27,7 @@ header {
   li {
     display: inline-block; /* Display links inline */
     margin-right: 20px; /* Add space between links */
+    position: relative; /* Position the list items relative to their normal position */
   }
   
   /* Style the anchor tags (links) */
@@ -30,11 +37,16 @@ header {
     font-weight: bold; /* Bold text */
   }
   
-  /* Apply gradient on hover effect */
-  a:hover {
+  /* Apply gradient bar below the highlighted choice */
+  li:hover:after {
+    content: "";
+    display: block;
+    height: 3px; /* Adjust the height of the gradient bar */
     background: linear-gradient(to right, #4d4d4d 0%, #999999 100%); /* Gradient from dark grey to lighter grey */
-    color: black; /* Black text on hover */
-    padding: 5px 10px; /* Add slight padding on hover */
-    border-radius: 5px; /* Add rounded corners on hover */
+    position: absolute;
+    bottom: -5px; /* Position the gradient bar slightly below the link */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center the gradient bar horizontally */
     transition: 0.3s ease-in-out; /* Smooth transition effect */
   }
