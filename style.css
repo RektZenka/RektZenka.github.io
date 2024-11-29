@@ -42,11 +42,25 @@ header {
     content: "";
     display: block;
     height: 3px; /* Adjust the height of the gradient bar */
-    background: linear-gradient(to right, #8c00ff 0%, #e100ff 100%); /* Gradient from dark grey to lighter grey */
+    background: linear-gradient(to right, #8400ff 0%, #ff00f2 100%); /* Gradient from dark grey to lighter grey */
     position: absolute;
     bottom: -5px; /* Position the gradient bar slightly below the link */
     left: 0;
     right: 0;
     margin: 0 auto; /* Center the gradient bar horizontally */
     transition: 0.3s ease-in-out; /* Smooth transition effect */
+    animation: gradientAnimation 2s infinite; /* Add animation */
+  }
+  
+  /* Define the animation */
+  @keyframes gradientAnimation {
+    0% {
+      background: linear-gradient(to right, #4d4d4d 0%, #999999 100%);
+    }
+    50% {
+      background: linear-gradient(to right, #999999 0%, #4d4d4d 100%);
+    }
+    100% {
+      background: linear-gradient(to right, #4d4d4d 0%, #999999 100%);
+    }
   }
