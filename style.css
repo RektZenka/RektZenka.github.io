@@ -1,0 +1,40 @@
+/* Style the header */
+header {
+    background-color: #333; /* Dark grey background */
+    padding: 10px 20px;
+  }
+  
+  /* Style the navigation bar */
+  nav {
+    display: flex;
+    justify-content: space-between; /* Space links evenly */
+  }
+  
+  /* Style the unordered list */
+  ul {
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Style the list items */
+  li {
+    display: inline-block; /* Display links inline */
+    margin-right: 20px; /* Add space between links */
+  }
+  
+  /* Style the anchor tags (links) */
+  a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Apply gradient on hover effect */
+  a:hover {
+    background: linear-gradient(to right, #4d4d4d 0%, #999999 100%); /* Gradient from dark grey to lighter grey */
+    color: black; /* Black text on hover */
+    padding: 5px 10px; /* Add slight padding on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+    transition: 0.3s ease-in-out; /* Smooth transition effect */
+  }
